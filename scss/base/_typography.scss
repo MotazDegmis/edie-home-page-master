@@ -1,0 +1,35 @@
+/**
+ * Basic typography style for copy text
+ */
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+h2.title {
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 2.25rem;
+  max-width: 272px;
+  color: var(--clr-title);
+  margin-inline: 8vw;
+  @include sm {
+    font-size: 3em;
+    line-height: 1.5em;
+    margin-top: 0.3em;
+    max-width: 543px;
+  }
+}
+
+h3.title {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: 500;
+  color: var(--clr-title);
+  margin-inline: 8vw;
+  margin-top: 4em;
+  max-width: 260px;
+  @include sm {
+    font-size: 2.25em;
+    max-width: 350px;
+    margin-inline: 2vw;
+  }
+}

@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.card__btn {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: 500;
+  color: var(--clr-text2);
+  background-color: var(--clr-btn);
+  padding: 0.5em 0.7em;
+  border-radius: 0.75em;
+  transition: all 0.4s ease-in-out;
+}
+
+.see__btn {
+  display: inline-block;
+  font-size: 1.125em;
+  line-height: 1.5em;
+  font-weight: 500;
+  color: var(--clr-blue);
+  & i {
+    display: inline-block;
+    margin-left: 1em;
+    width: 50px;
+    // animation: arrow 2s infinite linear;
+  }
+}
+
+// @keyframes arrow {
+//   0% {
+//     margin-left: 1em;
+//   }
+//   40% {
+//     margin-left: 1.5em;
+//   }
+//   60% {
+//     margin-left: 1em;
+//   }
+//   80% {
+//     margin-left: 1.5em;
+//   }
+//   100% {
+//     margin-left: 1em;
+//   }
+// }

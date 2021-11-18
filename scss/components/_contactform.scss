@@ -1,0 +1,68 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.contact__form {
+  position: relative;
+  max-width: 291px;
+  margin-top: 2em;
+  margin-left: 8vw;
+  & label {
+    display: block;
+    font-size: 0.625em;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: var(--clr-text2);
+  }
+  & .email {
+    display: block;
+    width: 100%;
+    margin-top: 0.5em;
+    padding: 1em 1em;
+    border: 0;
+    outline: 0;
+    background-color: var(--clr-input);
+    border-radius: 0.75em;
+    &::placeholder {
+      transform-origin: left;
+      transition: transform 0.3s ease-in-out, opacity 0.3s linear;
+    }
+    &:focus-visible::placeholder,
+    &:focus::placeholder {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  & .form__btn {
+    font-size: 0.875rem;
+    font-weight: 500;
+    position: absolute;
+    border: 0;
+    outline: 1px solid var(--clr-blue);
+    outline-offset: -1px;
+    bottom: 25px;
+    right: 4px;
+    transform: translateY(50%);
+    padding: 0.9em 1.4em;
+    border-radius: 0.75em;
+    color: var(--clr-input);
+    background-color: var(--clr-blue);
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &:hover,
+    &:focus-visible {
+      color: var(--clr-blue);
+      background-color: var(--clr-input);
+    }
+  }
+  @include md {
+    max-width: 350px;
+    margin-top: 5em;
+    & label {
+      font-size: 0.875em;
+    }
+    & .form__btn {
+      font-size: 1.125rem;
+      padding: 0.55em 1.4em;
+    }
+  }
+}

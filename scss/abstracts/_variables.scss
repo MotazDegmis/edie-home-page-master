@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+:root {
+  --clr-blue: hsla(202, 71%, 52%, 1);
+  --clr-title: hsla(0, 0%, 20%, 1);
+  --clr-text1: hsla(0, 0%, 31%, 1);
+  --clr-text2: hsla(0, 0%, 51%, 1);
+  --clr-text3: hsla(0, 0%, 74%, 1);
+  --clr-btn: hsla(0, 0%, 88%, 1);
+  --clr-input: hsla(0, 0%, 95%, 1);
+  --clr-green: hsla(145, 63%, 42%, 1);
+  --clr-red: hsla(0, 79%, 63%, 1);
+  --clr-footer: hsla(248, 35%, 8%, 1);
+  --font-family-logo: "Heebo", sans-serif;
+  --font-family: "Poppins", sans-serif;
+}

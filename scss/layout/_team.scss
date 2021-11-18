@@ -1,0 +1,56 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.team {
+  margin-top: 10em;
+  margin-bottom: 10em;
+
+  &__contant {
+    & p:nth-child(1) {
+      font-size: 1.125em;
+      line-height: 1.5em;
+      font-weight: 500;
+      color: var(--clr-red);
+    }
+    & h4 {
+      font-size: 2.25em;
+      line-height: 1.5em;
+      font-weight: 500;
+      color: var(--clr-title);
+      margin-right: 1em;
+      margin-block: 0.1em 0.3em;
+      max-width: 280px;
+    }
+    & p:nth-child(3) {
+      font-size: 1em;
+      line-height: 1.5em;
+      color: var(--clr-text1);
+      margin-right: 2em;
+      margin-bottom: 3em;
+      max-width: 273px;
+    }
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    &-left {
+      border-radius: 1.5em;
+      overflow: hidden;
+    }
+    &-right {
+      & img {
+        border-radius: 1.5em;
+        margin-block: 1em;
+      }
+    }
+  }
+  @include md {
+    & .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

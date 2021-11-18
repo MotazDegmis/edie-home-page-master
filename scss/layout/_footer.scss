@@ -1,0 +1,103 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.footer {
+  background-color: var(--clr-footer);
+  padding-bottom: 5em;
+  &__nav {
+    padding: 2.25em;
+    &-item {
+      margin: 1em 0.5em;
+    }
+    &-link {
+      --clr-link: #fff;
+      font-size: 1.125em;
+      line-height: 1.5em;
+      font-weight: 400;
+      color: var(--clr-link);
+      transition: color 0.25s linear;
+      width: max-content;
+      &:hover {
+        --clr-link: var(--clr-blue);
+      }
+    }
+  }
+  &__links {
+    padding: 2.25em;
+
+    color: var(--clr-input);
+    &-logo {
+      font-family: var(--font-family-logo);
+      font-size: 2.25em;
+      color: inherit;
+      margin: 0.2em 0;
+      cursor: pointer;
+      transition: color 0.3s linear;
+      &:hover {
+        color: var(--clr-blue);
+      }
+    }
+    & i {
+      //   font-size: 1.5em;
+      display: inline-block;
+      position: relative;
+      font-size: 1.5em;
+      margin-right: 0.4em;
+      cursor: pointer;
+      z-index: 1;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        border-radius: 0.1em;
+        background-color: var(--clr-blue);
+        z-index: -1;
+        transition: transform 0.3s ease-in-out;
+        transform-origin: top;
+        transform: scaley(0);
+      }
+      &:hover::after {
+        transform: scaley(1);
+        transform-origin: bottom;
+      }
+    }
+  }
+  & .container > a {
+    display: block;
+    margin-top: 5em;
+    padding: 2.25em;
+    display: block;
+    color: #f2f2f2;
+    cursor: default;
+    & strong {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  & .contact__form {
+    margin-left: 2.25em;
+  }
+  @include sm {
+    &__nav {
+      padding-left: 0;
+    }
+    & .container > a {
+      width: max-content;
+      margin: 5em auto 0em;
+    }
+    & .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      //   gap: 8vw;
+
+      & .contact__form {
+        margin-top: 2.25em;
+        max-width: 280px;
+        width: 100%;
+      }
+    }
+  }
+}

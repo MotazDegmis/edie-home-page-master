@@ -1,0 +1,82 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.services {
+  &__list {
+    margin-top: 4em;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1em;
+    &-item {
+      position: relative;
+      padding: 2em;
+      cursor: pointer;
+      border-radius: 1.5em;
+
+      margin-bottom: 2em;
+
+      & .icon {
+        font-size: 1.5em;
+        width: 67px;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        color: #fff;
+        margin-bottom: 1.5em;
+
+        background-color: var(--clr-card);
+      }
+      &:hover {
+        --clr-btn: var(--clr-card);
+        --clr-text2: #fff;
+        &::before {
+          opacity: 1;
+        }
+      }
+      &:nth-child(1) {
+        --clr-card: var(--clr-blue);
+      }
+      &:nth-child(2) {
+        --clr-card: var(--clr-green);
+      }
+      &:nth-child(3) {
+        --clr-card: var(--clr-red);
+      }
+      & h4 {
+        font-size: 1.5em;
+        font-weight: 500;
+        line-height: 1.5em;
+        color: var(--clr-title);
+        margin-bottom: 1.5em;
+      }
+      & p {
+        font-size: 1em;
+        line-height: 1.5em;
+        color: var(--clr-text1);
+        margin-bottom: 2.25em;
+      }
+      & .card__btn {
+        margin-bottom: 1em;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background-color: transparent;
+        // box-shadow: 0 5px 20px -5px hsl(0 0% 0% / 0.2);
+        box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+        opacity: 0;
+        transition: opacity 0.4s linear;
+      }
+    }
+  }
+  @include sm {
+    &__list {
+      margin-inline: 2vw;
+    }
+  }
+}

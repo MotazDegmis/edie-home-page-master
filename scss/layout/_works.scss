@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.works {
+  margin-top: 1em;
+  & .title {
+    max-width: 267px;
+    margin-bottom: 3em;
+    @include sm {
+      max-width: 450px;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    &-item {
+      & .item__img {
+        max-width: 100%;
+        border-radius: 1em;
+        overflow: hidden;
+        margin-bottom: 1em;
+        & img {
+          width: 100%;
+        }
+      }
+      p {
+        font-size: 0.75em;
+        line-height: 1.5em;
+        font-weight: 300;
+        color: var(--clr-text2);
+      }
+      h4 {
+        font-size: 1.125em;
+        line-height: 1.5em;
+        font-weight: 500;
+        margin-bottom: 1em;
+      }
+    }
+  }
+  & .see__btn {
+    margin-block: 0.5em;
+    transition: color 0.2s linear;
+    &:hover {
+      --clr-blue: var(--clr-red);
+    }
+  }
+  @include md {
+    &__list {
+      &-item {
+        &:nth-child(2) {
+          margin-top: -12em;
+        }
+        &:nth-child(4) {
+          margin-top: -12em;
+        }
+      }
+    }
+    & .see__btn {
+      // display: flex;
+      // align-items: center;
+      // justify-content: flex-end;
+      float: right;
+      margin-top: -3em;
+      margin-right: 5em;
+    }
+  }
+}
